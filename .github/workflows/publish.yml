@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate and Push
     steps:
+      - name: git-checkout
+        uses: actions/checkout@v4
+
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
@@ -21,9 +24,6 @@ jobs:
         with:
           node-version: 20
           cache: 'pnpm'
-
-      - name: git-checkout
-        uses: actions/checkout@v4
       
       - name: Install dependencies
         run: pnpm i
