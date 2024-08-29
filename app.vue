@@ -1,41 +1,41 @@
 <script setup lang="ts">
-import '@unocss/reset/eric-meyer.css';
-
-const Hero = defineAsyncComponent(() => import('./components/hero.vue'))
+import '@unocss/reset/eric-meyer.css'
 </script>
 
 <template>
-  <div>
-    <pre-loader />
-    <hero />
+  <div class="min-w-100vw min-h-100vh max-w-100vw max-h-100vh flex flex-col items-center bg-purple-800 text-white">
+    <div class="flex flex-col gap-2 items-center mt-18">
+      <h1 class="text-6xl font-bold">MqDev</h1>
+      <sub class="font-semibold">A software development</sub>
+    </div>
+
+    <h2 class="text-4xl font-bold mb-8 mt-20">Our products</h2>
+    <a href="https://image-hub.mqdev.com.br/" class="flex flex-col items-center mb-2">
+      <img src="/image-hub.png" class="w-100" />
+      <a href="https://image-hub.mqdev.com.br/" class="text-xl font-semibold">Image Hub</a>
+      <div>Online image tooling</div>
+    </a>
+
+    <h2 class="text-4xl font-bold mb-8 mt-20">About us</h2>
+    <div class="text-center">
+      We are a software development company active in Games, Media, Tooling and Management sectors.
+      <br>
+      We focus on <strong>Vue.js</strong>, <strong>Nuxt</strong>, <strong>Laravel</strong>, <strong>Go</strong>, <strong>C#</strong> and <strong>Unity</strong> development.
+      <br>
+      We already delivered solutions to many companies and individuals of different sizes. We are always looking for new challenges.
+      <br>
+      Our philosophy is to deliver the best solution for the problem, always focusing on the user experience.
+    </div>
   </div>
 </template>
 
 <style lang="sass">
-*
-  margin: 0
-  padding: 0
-  -webkit-box-sizing: border-box
-  box-sizing: border-box
-  scrollbar-width: thin
-  scrollbar-color: #8750f7 #2a1454
-
-html, body
-  min-height: 100%
-  overflow-x: hidden
-
 body
   font-family: sans-serif
-  font-size: 16px
-  font-weight: 400
-  color: #ddd
 
-body
-  margin: 0
-  line-height: 1.5
-  -webkit-text-size-adjust: 100%
-  -webkit-tap-highlight-color: transparent
-
-img, svg
-  vertical-align: middle
+a
+  color: white
+  text-decoration: none
+  &:hover
+    text-decoration: underline
 </style>
